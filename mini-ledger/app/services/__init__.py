@@ -1,3 +1,3 @@
-from ledger import LedgerService
+from .ledger import LedgerService
 
 __all__ = ["LedgerService"]
