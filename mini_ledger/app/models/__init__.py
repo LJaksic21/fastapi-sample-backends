@@ -1,3 +1,6 @@
+from .db import Account as AccountModel
+from .db import IdempotencyRecord as IdempotencyRecordModel
+from .db import LedgerEntry as LedgerEntryModel
 from .schemas import (
     AccountCreate,
     AccountResponse,
@@ -14,4 +17,7 @@ __all__ = [
     "MoneyMovementRequest",
     "StatementResponse",
     "TransferRequest",
+    "AccountModel",
+    "LedgerEntryModel",
+    "IdempotencyRecordModel",
 ]
