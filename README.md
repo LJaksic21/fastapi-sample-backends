@@ -85,8 +85,7 @@ Every mutating endpoint requires an `Idempotency-Key` header (UUID recommended).
 
 ## Full Requirements Brief
 
-**Theme:** Core fintech ledger logic, data integrity, idempotency  
-**Difficulty:** Medium (60–75 min)
+**Theme:** Core fintech ledger logic, data integrity, idempotency
 
 ### Goal
 Expose a double-entry ledger API: create accounts, deposit/withdraw, transfer between accounts, and fetch statements. Prevent negative balances. Support idempotent POSTs.
@@ -127,15 +126,3 @@ Expose a double-entry ledger API: create accounts, deposit/withdraw, transfer be
 - Transfer creates two entries and conserves total
 - Idempotent deposit: replay returns same payload without double crediting
 - Statement reverse-chronological order with pagination
-
-### Evaluation Rubric (Suggested)
-- Correctness 40% (rules & invariants)
-- API design & validation 25%
-- Code structure & clarity 20%
-- Tests 10%
-- Extras 5% (auth, README, OpenAPI polish)
-
-### Stretch Goals (if time)
-- JWT bearer auth on mutating routes
-- `BackgroundTask` receipts or webhooks
-- Promote SQLite to Postgres with zero code changes
